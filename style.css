@@ -1,0 +1,1454 @@
+/* =========================================
+        PORTFOLIO CSS
+        Author : Huynh Ngoc Khoa
+========================================= */
+
+/* ===============================
+            GOOGLE FONT
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ===============================
+            VARIABLES
+================================= */
+
+:root{
+
+    --primary:#00e5ff;
+
+    --secondary:#8b5cf6;
+
+    --background:#08111f;
+
+    --background2:#111827;
+
+    --card:rgba(255,255,255,.08);
+
+    --white:#ffffff;
+
+    --gray:#cbd5e1;
+
+    --transition:.4s;
+
+}
+
+
+/* ===============================
+            RESET
+================================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+    135deg,
+    #08111f,
+    #111827,
+    #1e293b);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+    color:white;
+
+}
+
+
+ul{
+
+    list-style:none;
+
+}
+
+
+section{
+
+    padding:100px 10%;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+    color:var(--primary);
+
+}
+
+
+/* ===============================
+        CUSTOM SCROLLBAR
+================================= */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00bcd4;
+
+}
+
+
+/* ===============================
+        PARTICLE BACKGROUND
+================================= */
+
+#particles-js{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    z-index:-10;
+
+}
+
+
+/* ===============================
+            HEADER
+================================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 10%;
+
+    background:rgba(0,0,0,.3);
+
+    backdrop-filter:blur(12px);
+
+    z-index:1000;
+
+    transition:.4s;
+
+}
+
+
+/* ===============================
+            LOGO
+================================= */
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+
+/* ===============================
+            NAVBAR
+================================= */
+
+nav ul{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+nav ul li a{
+
+    font-size:18px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+
+nav ul li a:hover{
+
+    color:var(--primary);
+
+}
+
+
+/* ===============================
+        HAMBURGER MENU
+================================= */
+
+#menu-btn{
+
+    display:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+
+/* ===============================
+            HERO
+================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+
+.hero-content{
+
+    flex:1;
+
+}
+
+
+.hero-content h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+
+.hero-content h1{
+
+    font-size:65px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+
+.hero-content h1 span{
+
+    color:var(--primary);
+
+}
+
+
+.hero-content h2{
+
+    font-size:34px;
+
+    color:var(--gray);
+
+    margin-bottom:20px;
+
+}
+
+
+.hero-content p{
+
+    font-size:18px;
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+
+    max-width:600px;
+
+    margin-bottom:40px;
+
+}
+
+
+/* ===============================
+            BUTTONS
+================================= */
+
+.hero-btn{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+.btn{
+
+    padding:15px 35px;
+
+    background:var(--primary);
+
+    color:black;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 30px var(--primary);
+
+}
+
+
+.btn-outline{
+
+    background:transparent;
+
+    border:2px solid var(--primary);
+
+    color:white;
+
+}
+
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:black;
+
+}
+
+
+/* ===============================
+        SOCIAL ICON
+================================= */
+
+.social{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+.social a{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    border:2px solid var(--primary);
+
+    transition:.4s;
+
+    font-size:22px;
+
+}
+
+
+.social a:hover{
+
+    background:var(--primary);
+
+    color:black;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px var(--primary);
+
+}
+
+
+/* ===============================
+        HERO IMAGE
+================================= */
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.hero-image img{
+
+    width:420px;
+
+    border-radius:30px;
+
+    transition:.5s;
+
+    filter:drop-shadow(0 0 30px rgba(0,229,255,.5));
+
+}
+
+
+.hero-image img:hover{
+
+    transform:scale(1.05);
+
+    filter:drop-shadow(0 0 50px cyan);
+
+}
+
+/* =========================================
+                ABOUT
+========================================= */
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.about-text p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:var(--gray);
+
+    margin-bottom:20px;
+
+}
+
+.about-text strong{
+
+    color:var(--primary);
+
+}
+
+.about-info{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+.info-card{
+
+    background:var(--card);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:var(--transition);
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(0,229,255,.3);
+
+}
+
+.info-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.info-card p{
+
+    color:var(--gray);
+
+}
+
+
+
+/* =========================================
+                SKILLS
+========================================= */
+
+.skill-list{
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.skill{
+
+    margin-bottom:35px;
+
+}
+
+.skill span{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:18px;
+
+    background:#243447;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress div{
+
+    height:100%;
+
+    border-radius:50px;
+
+    animation:loadSkill 2s ease forwards;
+
+}
+
+.html{
+
+    width:95%;
+
+    background:#ff5722;
+
+}
+
+.css{
+
+    width:90%;
+
+    background:#2196f3;
+
+}
+
+.js{
+
+    width:85%;
+
+    background:#ffd600;
+
+}
+
+.java{
+
+    width:90%;
+
+    background:#9c27b0;
+
+}
+
+@keyframes loadSkill{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+
+
+/* =========================================
+            PROJECT SECTION
+========================================= */
+
+.project-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.project-card{
+
+    background:var(--card);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.45s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 0 30px rgba(0,229,255,.35);
+
+}
+
+.project-card i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.project-card h3{
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+}
+
+.project-card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+.project-card button{
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+    background:var(--primary);
+
+    color:black;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.project-card button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 25px var(--primary);
+
+}
+
+
+
+/* =========================================
+                CONTACT
+========================================= */
+
+form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+form input,
+
+form textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:15px;
+
+    outline:none;
+
+    resize:none;
+
+    font-size:17px;
+
+}
+
+form input:focus,
+
+form textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 20px rgba(0,229,255,.3);
+
+}
+
+form button{
+
+    width:220px;
+
+    padding:18px;
+
+    margin:auto;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:var(--primary);
+
+    color:black;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    font-size:17px;
+
+    transition:.4s;
+
+}
+
+form button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px var(--primary);
+
+}
+
+
+
+/* =========================================
+                FOOTER
+========================================= */
+
+footer{
+
+    margin-top:100px;
+
+    padding:30px;
+
+    background:#050b17;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:#9ca3af;
+
+    font-size:16px;
+
+}
+
+
+
+/* =========================================
+            SCROLL TO TOP
+========================================= */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:black;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    display:none;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+#topBtn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 25px var(--primary);
+
+}
+
+
+
+/* =========================================
+            SIMPLE FADE EFFECT
+========================================= */
+
+.hero,
+
+.about-container,
+
+.skill-list,
+
+.project-container,
+
+form{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================
+            RESPONSIVE DESIGN
+========================================= */
+
+/* ===============================
+        Large Desktop (1600px+)
+================================= */
+
+@media screen and (min-width:1600px){
+
+    section{
+        padding:120px 15%;
+    }
+
+    .hero-content h1{
+        font-size:80px;
+    }
+
+    .hero-image img{
+        width:500px;
+    }
+
+}
+
+
+/* ===============================
+            Desktop
+================================= */
+
+@media screen and (max-width:1200px){
+
+    header{
+        padding:0 6%;
+    }
+
+    section{
+        padding:100px 6%;
+    }
+
+    .hero-content h1{
+        font-size:55px;
+    }
+
+    .hero-image img{
+        width:380px;
+    }
+
+}
+
+
+/* ===============================
+            Laptop
+================================= */
+
+@media screen and (max-width:992px){
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+    .hero-content p{
+
+        margin:auto;
+
+        margin-bottom:35px;
+
+    }
+
+    .hero-btn{
+
+        justify-content:center;
+
+    }
+
+    .social{
+
+        justify-content:center;
+
+    }
+
+    .hero-image img{
+
+        width:320px;
+
+    }
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .project-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* ===============================
+            Tablet
+================================= */
+
+@media screen and (max-width:768px){
+
+    header{
+
+        padding:0 30px;
+
+    }
+
+    #menu-btn{
+
+        display:block;
+
+    }
+
+    nav{
+
+        position:absolute;
+
+        top:80px;
+
+        left:-100%;
+
+        width:100%;
+
+        background:#111827;
+
+        transition:.4s;
+
+    }
+
+    nav.active{
+
+        left:0;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:30px;
+
+        padding:35px 0;
+
+    }
+
+    .hero{
+
+        padding-top:130px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-content h2{
+
+        font-size:24px;
+
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+    }
+
+    .project-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero-image img{
+
+        width:280px;
+
+    }
+
+}
+
+
+/* ===============================
+        Large Mobile
+================================= */
+
+@media screen and (max-width:576px){
+
+    section{
+
+        padding:80px 25px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-content h2{
+
+        font-size:22px;
+
+    }
+
+    .hero-content h3{
+
+        font-size:24px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .hero-btn{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn{
+
+        width:220px;
+
+        text-align:center;
+
+    }
+
+    .hero-image img{
+
+        width:240px;
+
+    }
+
+    .project-card{
+
+        padding:30px;
+
+    }
+
+    form button{
+
+        width:100%;
+
+    }
+
+}
+
+
+/* ===============================
+            Mobile
+================================= */
+
+@media screen and (max-width:480px){
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .section-title{
+
+        font-size:30px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:30px;
+
+    }
+
+    .hero-content h2{
+
+        font-size:20px;
+
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+
+    }
+
+    .hero-image img{
+
+        width:200px;
+
+    }
+
+    .social{
+
+        flex-wrap:wrap;
+
+        gap:15px;
+
+    }
+
+    .social a{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:18px;
+
+    }
+
+    .info-card{
+
+        padding:20px;
+
+    }
+
+    .project-card{
+
+        padding:25px;
+
+    }
+
+    .project-card h3{
+
+        font-size:20px;
+
+    }
+
+    .project-card p{
+
+        font-size:15px;
+
+    }
+
+    .skill span{
+
+        font-size:16px;
+
+    }
+
+    .progress{
+
+        height:14px;
+
+    }
+
+}
+
+
+/* ===============================
+    Landscape Phone
+================================= */
+
+@media screen and (max-height:500px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:120px;
+
+        padding-bottom:60px;
+
+    }
+
+}
+
+
+/* ===============================
+    Reduced Motion
+================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+
+/* ===============================
+        Dark Theme Support
+================================= */
+
+@media (prefers-color-scheme:dark){
+
+    body{
+
+        background:#08111f;
+
+        color:white;
+
+    }
+
+}
+
+
+/* ===============================
+        Print
+================================= */
+
+@media print{
+
+    #particles-js,
+
+    #topBtn,
+
+    #menu-btn{
+
+        display:none;
+
+    }
+
+    body{
+
+        background:white;
+
+        color:black;
+
+    }
+
+}
